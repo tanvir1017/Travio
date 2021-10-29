@@ -1,0 +1,12 @@
+.nav-item a {
+  color: white !important;
+}
+.navbar-brand {
+  color: white !important;
+}
+.navbar-brand img {
+  width: 30%;
+}
+.nav-item a:hover {
+  color: #ffb300 !important;
+}

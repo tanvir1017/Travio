@@ -1,5 +1,6 @@
 .cardCol {
   position: relative;
+  cursor: pointer;
 }
 .addedBtn {
   display: none;

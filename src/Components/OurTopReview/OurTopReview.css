@@ -1,0 +1,20 @@
+img {
+  width: 100%;
+  height: 100%;
+}
+.exoticeP {
+  margin: auto;
+  text-align: center;
+  width: 75%;
+}
+.right-side-banner {
+  background-image: url(https://i.ibb.co/grdnHCH/side-banner-img2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  color: white;
+}
+.right-side-bannger-text {
+  padding: 8px;
+  margin: 50px auto;
+}
