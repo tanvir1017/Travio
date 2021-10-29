@@ -1,0 +1,22 @@
+.right-side-img img {
+  width: 100%;
+}
+.button {
+  background: #ffb300;
+  border: none;
+  color: white;
+  padding: 10px;
+  transition: 0.8s;
+}
+.button:hover {
+  background: #000;
+}
+.left-side-text {
+  margin: auto;
+  text-align: left;
+}
+.left-side-text h2 {
+  font-size: 45px;
+  font-weight: bold;
+  margin-bottom: 40px;
+}

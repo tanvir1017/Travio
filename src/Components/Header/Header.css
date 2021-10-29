@@ -1,0 +1,66 @@
+.heder-banner-background {
+  background-image: linear-gradient(#20202031, #03030328),
+    url("https://i.ibb.co/9T8HM9R/slider-header-banner-2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 86vh;
+  background-attachment: fixed;
+  width: 100%;
+}
+.linkText {
+  color: white;
+  font-weight: 100;
+  font-size: 15px;
+  letter-spacing: 1px;
+}
+.linkText:hover {
+  color: #ffee00;
+  cursor: pointer;
+}
+.heading-tag {
+  max-width: 60%;
+  position: relative;
+}
+.heading-title h1 {
+  font-weight: bold;
+}
+.heading-title {
+  width: 100%;
+  position: absolute;
+  left: -50%;
+  top: 30%;
+  transform: translate(85%, 40%);
+  display: block;
+}
+.input input,
+select {
+  padding: 10px;
+  font-size: 15px;
+  width: 30%;
+  height: 50px;
+  outline: none;
+  border: 1px solid #c3c3c3;
+}
+.input button {
+  background: #ffb300;
+  border: none;
+  color: white;
+  padding: 10px;
+  width: 20%;
+  height: 50px;
+  outline: none;
+  transition: 0.8s;
+}
+.input button:hover {
+  background: #000;
+}
+select {
+  color: #808080;
+}
+select option {
+  background: #e2e2e2;
+  box-shadow: none !important;
+}
+select option:hover {
+  background: #949494;
+}
