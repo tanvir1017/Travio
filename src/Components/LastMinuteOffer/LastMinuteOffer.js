@@ -1,8 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./LastMin.css";
 
 const LastMinuteOffer = (props) => {
-  const { place, title, price, img } = props.offer;
+  const { _id, title, price, img } = props.offer;
   return (
     <div className="cardCol">
       <div class="col">
@@ -10,7 +11,14 @@ const LastMinuteOffer = (props) => {
           <img src={img} class="card-img-top" alt="..." />
         </div>
         <div className="addedBtn">
-          <button className="btn btn-success">Add to cart</button>
+          <div className="text-start">
+            <h2 className="fw-bold">{title}</h2>
+            <strong>{price}</strong>
+            <br />
+            <Link to={`/serviceDetails/${_id}`}>
+              <button className="btn btn-success">Book Now</button>
+            </Link>
+          </div>
         </div>
       </div>
     </div>

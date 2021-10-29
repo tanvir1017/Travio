@@ -18,3 +18,14 @@ img {
   padding: 8px;
   margin: 50px auto;
 }
+.dare-to-explore {
+  cursor: pointer;
+}
+.dare-to-explore::after {
+  content: "";
+  width: 90px;
+  height: 2px;
+  display: block;
+  margin: auto;
+  background: #ffb300;
+}

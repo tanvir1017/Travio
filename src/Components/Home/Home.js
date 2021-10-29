@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import DareToExplore from "../DareToExplore/DareToExplore";
 import Exotic from "../Exotic/Exotic";
 import LastMinuteOffer from "../LastMinuteOffer/LastMinuteOffer";
 import OurTopReview from "../OurTopReview/OurTopReview";
@@ -7,7 +8,7 @@ import "./Home.css";
 const Home = () => {
   const [offers, setOffers] = useState();
   useEffect(() => {
-    fetch("http://localhost:5000/tour")
+    fetch("http://localhost:5000/travel")
       .then((res) => res.json())
       .then((data) => setOffers(data));
   }, []);
@@ -32,7 +33,7 @@ const Home = () => {
           </div>
         </div>
         <div className="mt-4 text-center">
-          <h1 className="mb-5 fw-bold">
+          <h1 className="mb-5 fw-bold common-tag-style">
             Last Minutes <span className="text-warning"> Offers</span>
           </h1>
 
@@ -45,13 +46,13 @@ const Home = () => {
       </div>
 
       <div className="mt-4 text-center">
-        <h1 className="mb-5 fw-bold">
+        <h1 className="mb-5 fw-bold common-tag-style">
           Our<span className="text-warning"> Top Reviews</span>
         </h1>
         <OurTopReview></OurTopReview>
       </div>
       <div className="mt-4 text-center container">
-        <h1 className="fw-bold">
+        <h1 className="fw-bold common-tag-style">
           Go <span className="text-warning">Exotice place</span>
         </h1>
         <p className="exoticeP">
@@ -60,6 +61,9 @@ const Home = () => {
           offers for you.
         </p>
         <Exotic></Exotic>
+      </div>
+      <div className="mt-4 text-center">
+        <DareToExplore></DareToExplore>
       </div>
     </>
   );

@@ -25,6 +25,7 @@ const OurTopReview = () => {
               affordable as well, with stations in both rural cities and some of
               the biggest tourist destinations in Thailand.
             </p>
+            <p className="text-warning dare-to-explore">See more...</p>
           </div>
         </div>
       </div>
