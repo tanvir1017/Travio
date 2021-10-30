@@ -16,28 +16,26 @@ const useFirebase = () => {
   const [isLoad, setIsLoad] = useState(true);
   const auth = getAuth();
   const googleSignin = () => {
-    const googleProvider = new GoogleAuthProvider();
     setIsLoad(true);
-    signInWithPopup(auth, googleProvider)
-      .then((result) => {
-        console.log(result.user);
-        setUser(result.user);
-      })
-      .catch((error) => setError(error.message))
-      .finally(() => {
-        setIsLoad(false);
-      });
+    const googleProvider = new GoogleAuthProvider();
+    return signInWithPopup(auth, googleProvider);
   };
   const logout = () => {
-    signOut(auth).then(() => {
-      setUser({});
-    });
+    setIsLoad(true);
+    signOut(auth)
+      .then(() => {
+        setUser({});
+      })
+      .finally(() => setIsLoad(false));
   };
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
       if (user) {
         setUser(user);
+      } else {
+        setUser({});
       }
+      setIsLoad(false);
     });
   }, []);
   return {
@@ -45,6 +43,9 @@ const useFirebase = () => {
     googleSignin,
     user,
     logout,
+    setError,
+    setIsLoad,
+    setUser,
     isLoad,
   };
 };
