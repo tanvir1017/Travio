@@ -1,3 +1,4 @@
+import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useParams } from "react-router";
@@ -6,14 +7,18 @@ import "./ServiceInfo.css";
 
 const ServiceInfo = () => {
   const { register, handleSubmit } = useForm();
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = (data) => {
+    console.log(data);
+    axios.post("http://localhost:5000/BookingInfo", data).then((res) => {
+      console.log(res);
+    });
+  };
   const { id } = useParams();
   const [service, setService] = useState({});
   useEffect(() => {
     fetch(`http://localhost:5000/travel/${id}`)
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         setService(data);
       });
   }, [id]);
@@ -86,7 +91,7 @@ const ServiceInfo = () => {
               <input {...register("description")} placeholder="description" />
               <input
                 type="number"
-                {...register("age", { min: 18, max: 99 })}
+                {...register("age", { min: 16, max: 70 })}
                 placeholder="age must be 16+"
               />
               <input {...register("img")} placeholder="img-url" />
@@ -94,7 +99,7 @@ const ServiceInfo = () => {
             </form>
           </div>
         </div>
-        <div className="text-center">
+        <div className="text-center my-5">
           <Link to="/home">
             <button className="shadow-lg btn border px-5 rounded">
               <i class="fas fa-arrow-left"></i>

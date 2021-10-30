@@ -1,0 +1,22 @@
+.chooseTourimg {
+  padding: 10%;
+  position: relative;
+  background-image: linear-gradient(#0000004d, #0000002f),
+    url(https://i.ibb.co/2Ks5Fpt/section-banner-1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.chooseTourimg h2 {
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+}
+.fas:hover {
+  color: #ffb300;
+  cursor: pointer;
+}
+.fab:hover {
+  cursor: pointer;
+  color: #ffb300;
+}
