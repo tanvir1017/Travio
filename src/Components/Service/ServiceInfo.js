@@ -11,14 +11,16 @@ const ServiceInfo = () => {
   const { register, handleSubmit } = useForm();
   const onSubmit = (data) => {
     console.log(data);
-    axios.post("http://localhost:5000/booking", data).then((res) => {
-      console.log(res);
-    });
+    axios
+      .post("https://arcane-fjord-23873.herokuapp.com/booking", data)
+      .then((res) => {
+        console.log(res);
+      });
   };
   const { id } = useParams();
   const [service, setService] = useState({});
   useEffect(() => {
-    fetch(`http://localhost:5000/travel/${id}`)
+    fetch(`https://arcane-fjord-23873.herokuapp.com/travel/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setService(data);

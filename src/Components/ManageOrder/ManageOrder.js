@@ -6,7 +6,7 @@ const ManageOrder = () => {
   const [userData, setUserData] = useState([]);
   console.log(userData);
   useEffect(() => {
-    fetch("http://localhost:5000/booking")
+    fetch("https://arcane-fjord-23873.herokuapp.com/booking")
       .then((res) => res.json())
       .then((data) => {
         setUserData(data);
@@ -15,7 +15,7 @@ const ManageOrder = () => {
   const handleDelete = (id) => {
     const proccessed = window.confirm("Are really wants to delete");
     if (proccessed) {
-      const url = `http://localhost:5000/booking/${id}`;
+      const url = `https://arcane-fjord-23873.herokuapp.com/booking/${id}`;
       fetch(url, {
         method: "delete",
       })

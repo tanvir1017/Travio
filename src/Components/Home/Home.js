@@ -10,7 +10,7 @@ import "./Home.css";
 const Home = () => {
   const [offers, setOffers] = useState();
   useEffect(() => {
-    fetch("http://localhost:5000/travel")
+    fetch("https://arcane-fjord-23873.herokuapp.com/travel")
       .then((res) => res.json())
       .then((data) => setOffers(data));
   }, []);
