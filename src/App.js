@@ -6,6 +6,7 @@ import Footer from "./Components/Footer/Footer";
 import Header from "./Components/Header/Header";
 import Home from "./Components/Home/Home";
 import Login from "./Components/Login/Login";
+import ManageOrder from "./Components/ManageOrder/ManageOrder";
 import PrivateRoute from "./Components/Private/Private";
 import ServiceInfo from "./Components/Service/ServiceInfo";
 import AuthProvider from "./Context/AuthProvider";
@@ -22,6 +23,9 @@ function App() {
           <Route path="/home">
             <Home></Home>
           </Route>
+          <PrivateRoute path="/manage_orders">
+            <ManageOrder></ManageOrder>
+          </PrivateRoute>
           <PrivateRoute path="/addAplan">
             <AddYourPlan></AddYourPlan>
           </PrivateRoute>

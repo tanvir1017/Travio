@@ -9,7 +9,7 @@ const ServiceInfo = () => {
   const { register, handleSubmit } = useForm();
   const onSubmit = (data) => {
     console.log(data);
-    axios.post("http://localhost:5000/BookingInfo", data).then((res) => {
+    axios.post("http://localhost:5000/booking", data).then((res) => {
       console.log(res);
     });
   };
@@ -99,6 +99,8 @@ const ServiceInfo = () => {
             </form>
           </div>
         </div>
+
+        {/* home route */}
         <div className="text-center my-5">
           <Link to="/home">
             <button className="shadow-lg btn border px-5 rounded">
