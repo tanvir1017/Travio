@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import DareToExplore from "../DareToExplore/DareToExplore";
 import Exotic from "../Exotic/Exotic";
 import LastMinuteOffer from "../LastMinuteOffer/LastMinuteOffer";
+import OurBlog from "../OurBlog/OurBlog";
 import OurTopReview from "../OurTopReview/OurTopReview";
 import "./Home.css";
 
@@ -64,6 +65,17 @@ const Home = () => {
       </div>
       <div className="mt-4 text-center">
         <DareToExplore></DareToExplore>
+      </div>
+
+      <div className="mt-4 text-center container">
+        <h1 className="fw-bold common-tag-style">
+          Our <span className="text-warning">Blog </span>
+        </h1>
+        <p className="exoticeP">
+          Make your dreams come true. Explore, Journey, Discover, Adventure.
+          Making your heart want to return. Don'T Be A Tourist, Be A Traveler.
+        </p>
+        <OurBlog></OurBlog>
       </div>
     </>
   );

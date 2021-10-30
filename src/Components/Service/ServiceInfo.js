@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useParams } from "react-router";
 import { Link } from "react-router-dom";
+import "./ServiceInfo.css";
 
 const ServiceInfo = () => {
   const { register, handleSubmit } = useForm();
@@ -15,7 +16,7 @@ const ServiceInfo = () => {
         console.log(data);
         setService(data);
       });
-  }, []);
+  }, [id]);
   return (
     <>
       <div className="container">
@@ -75,13 +76,20 @@ const ServiceInfo = () => {
               </div>
             </div>
           </div>
-          <div className="col-md-5 col-lg-5 col-sm-12">
+
+          {/* react hook form */}
+
+          <div className="col-md-5 col-lg-5 col-sm-12 add-service">
             <form onSubmit={handleSubmit(onSubmit)}>
-              <input {...register("firstName")} />
-              <input {...register("email")} />
-              <input {...register("description")} />
-              <input type="number" {...register("age", { min: 18, max: 99 })} />
-              <input {...register("img")} />
+              <input {...register("firstName")} placeholder="First name" />
+              <input {...register("email")} placeholder="email" />
+              <input {...register("description")} placeholder="description" />
+              <input
+                type="number"
+                {...register("age", { min: 18, max: 99 })}
+                placeholder="age must be 16+"
+              />
+              <input {...register("img")} placeholder="img-url" />
               <input type="submit" />
             </form>
           </div>

@@ -1,12 +1,13 @@
 .footerBackground {
-  background: rgb(3, 3, 3);
+  background: #222222;
+  color: white;
 }
 .footerContact p {
   font-size: 14px;
 }
 .footerContact a {
   margin-top: 10px;
-  color: black;
+  color: white;
   text-decoration: none;
   transition: 0.6s;
 }
@@ -14,16 +15,12 @@
   text-decoration: underline;
 }
 .footerAlert {
-  background: rgb(199, 247, 255);
+  background: #fca533;
   padding: 10px;
+  font-weight: bold;
   border-radius: 10px;
-  color: rgb(3, 89, 160);
+  color: #000000;
 }
-.logo {
-  background: rgb(199, 247, 255);
-  padding: 10px;
-  border-radius: 10px;
-}
-.social {
-  color: rgb(3, 89, 160);
+.copyrigtText {
+  background-color: #fca533;
 }

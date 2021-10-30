@@ -9,33 +9,37 @@ const Footer = () => {
         <div className="container">
           <div className="row">
             <div className="container col-md-3 col-lg-3 col-sm-12">
-              <p className="text-start mt-2 ">
-                Click Medic (known globally as BIMA) uses mobile technology to
-                deliver affordable insurance and health products to underserved
-                consumers and their families in emerging markets.
+              <div>
+                <img
+                  style={{ width: "150px" }}
+                  src="https://i.ibb.co/4WHk98C/Logo-Makr-77iqbf.png"
+                  alt=""
+                />
+              </div>
+              <p className="text-start mt-1 ">
+                Travel and tourism provide services of all types for both
+                inbound and outbound travellers, and have become one of the
+                world's fastest growing industries. International travel and
+                tourism are the world's largest export earner and an important
+                factor in the balance of payments of most nations.
               </p>
             </div>
             <div className="col-md-3 col-lg-3 text-start col-sm-12 footerContact">
               <h5 className="footerAlert mt-3 mb-4 shadow">Contact use</h5>
-              <small>Click Medic BANGLADESH LTD</small> <br />
-              <small>Email: info@bd.milvik.com</small> <br />
-              <small>Address: AMBON Complex (12th Floor), </small> <br />
-              <small>
-                99 Bir Uttam AK Khandakar Road, Mohakhali C/A, Dhaka-1212.
-              </small>{" "}
-              <br />
-              <small>Phone: +8809610500599 </small> <br />
-              <small> Phone: +88 02 9858538 </small> <br />
-              <small>Phone: +8809614500599</small> <br />
+              <small>Refresh yourself</small> <br />
+              <small>Email: info@us.ry.com</small> <br />
+              <small>Address: 77/2 street(12th Floor), </small> <br />
+              <small>99 New Streat Road, Newyork C/A, us -1212.</small> <br />
+              <small>Phone: 09610500599 </small> <br />
+              <small> Phone: 02 9858538 </small> <br />
+              <small>Phone: 9614500599</small> <br />
             </div>
             <div className="col-md-3 col-lg-3 text-start col-sm-12 footerContact">
               <h5 className="footerAlert mt-3 mb-4 shadow">Company</h5>
-              <Link to="/about-us">About us</Link> <br />
-              <Link to="/">Product </Link> <br />
+              <Link to="/">About us</Link> <br />
+              <Link to="/">Blog </Link> <br />
               <Link to="/">Services</Link> <br />
-              <Link to="/">Contact us</Link> <br />
-              <Link to="/">Consumer satisfaction</Link> <br />
-              <Link to="/">Privacy policy</Link> <br />
+              <Link to="/">Add your plan</Link> <br />
               <Link to="/">Terms & conditions</Link> <br />
               <Link to="/faq">FAQ</Link> <br />
             </div>
@@ -48,24 +52,28 @@ const Footer = () => {
                   <div className="row">
                     <div className="col-md-3">
                       <img
+                        style={{ width: "45px" }}
                         src="https://milvikbd.com/_next/image?url=%2Ffb.svg&w=32&q=75"
                         alt=""
                       />
                     </div>
                     <div className="col-md-3">
                       <img
+                        style={{ width: "45px" }}
                         src="https://milvikbd.com/_next/image?url=%2Flinkedin.svg&w=32&q=75"
                         alt=""
                       />
                     </div>
-                    <div className="col-md-3">
+                    <div className="col-md-3 ">
                       <img
+                        style={{ width: "45px" }}
                         src="https://milvikbd.com/_next/image?url=%2Ftwitter.svg&w=32&q=75"
                         alt=""
                       />
                     </div>
                     <div className="col-md-3">
                       <img
+                        style={{ width: "45px" }}
                         src="https://milvikbd.com/_next/image?url=%2Finsta.svg&w=32&q=75"
                         alt=""
                       />
@@ -74,46 +82,11 @@ const Footer = () => {
                 </div>
                 <div className="col-md-5 col-lg-5 col-12"></div>
               </div>
-              <div className="row mt-3">
-                <h5 className="alert alert-danger fw-bold mt-3">We Accept</h5>
-                <div className="col-md-12 col-lg-12">
-                  <div className="row">
-                    <div className="col-md-3 col-lg-3 mb-3">
-                      <img
-                        width="40px"
-                        src="https://milvikbd.com/_next/image?url=%2FUpay.png&w=128&q=75"
-                        alt=""
-                      />
-                    </div>
-                    <div className="col-md-3 col-lg-3 mb-3">
-                      <img
-                        width="60px"
-                        src="https://milvikbd.com/_next/image?url=%2FBKash.png&w=384&q=75"
-                        alt=""
-                      />
-                    </div>
-                    <div className="col-md-3 col-lg-3 mb-3">
-                      <img
-                        width="70px"
-                        src="https://milvikbd.com/_next/image?url=%2FNagad.png&w=256&q=75"
-                        alt=""
-                      />
-                    </div>
-                    <div className="col-md-3 col-lg-3 mb-3">
-                      <img
-                        width="50px"
-                        src="https://milvikbd.com/_next/image?url=%2Fdutch-bangla-rocket-logo.png&w=256&q=75"
-                        alt=""
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
       </div>
-      <div className="bg-primary p-3 text-white">
+      <div className="copyrigtText p-3 text-white">
         &copy; All copyright Terms & conditions are reserved by Click Medic
       </div>
     </>
