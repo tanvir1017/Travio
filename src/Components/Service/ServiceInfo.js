@@ -2,10 +2,12 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useParams } from "react-router";
-import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
+import useAuth from "../../Hooks/useAuth";
 import "./ServiceInfo.css";
 
 const ServiceInfo = () => {
+  const { user } = useAuth();
   const { register, handleSubmit } = useForm();
   const onSubmit = (data) => {
     console.log(data);
@@ -86,8 +88,16 @@ const ServiceInfo = () => {
 
           <div className="col-md-5 col-lg-5 col-sm-12 add-service">
             <form onSubmit={handleSubmit(onSubmit)}>
-              <input {...register("firstName")} placeholder="First name" />
-              <input {...register("email")} placeholder="email" />
+              <input
+                {...register("firstName")}
+                placeholder="First name"
+                defaultValue={user.displayName}
+              />
+              <input
+                {...register("email")}
+                placeholder="email"
+                defaultValue={user.email}
+              />
               <input {...register("description")} placeholder="description" />
               <input
                 type="number"
@@ -102,11 +112,11 @@ const ServiceInfo = () => {
 
         {/* home route */}
         <div className="text-center my-5">
-          <Link to="/home">
+          <HashLink to="/home#cardCol">
             <button className="shadow-lg btn border px-5 rounded">
               <i class="fas fa-arrow-left"></i>
             </button>
-          </Link>
+          </HashLink>
         </div>
       </div>
     </>

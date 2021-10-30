@@ -7,7 +7,7 @@ const Navbar = () => {
   const { user, logout } = useFirebase();
   console.log(user);
   return (
-    <nav class="navbar navbar-expand-lg fixed ">
+    <nav class="navbar navbar-expand-lg">
       <div class="container">
         <Link class="navbar-brand">
           <img src="https://i.ibb.co/4WHk98C/Logo-Makr-77iqbf.png" alt="" />

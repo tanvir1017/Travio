@@ -34,7 +34,7 @@ const Home = () => {
             <button className="button">See More</button>
           </div>
         </div>
-        <div className="mt-4 text-center">
+        <div className="mt-4 text-center" id="cardCol">
           <h1 className="mb-5 fw-bold common-tag-style">
             Last Minutes <span className="text-warning"> Offers</span>
           </h1>
