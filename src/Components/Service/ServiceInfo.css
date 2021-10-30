@@ -2,9 +2,22 @@
   display: flex;
   flex-direction: column;
 }
-.add-service form input {
+.add-service form input textarea {
   margin: 10px;
   height: 50px;
   padding: 10px;
   width: 100%;
+  border: 2px solid #ffb300;
+}
+.add-service form input[value] {
+  background: #222;
+  color: #ffb300;
+}
+.bookBtn {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.fName {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }

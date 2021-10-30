@@ -6,7 +6,7 @@ span {
   color: white !important;
 }
 .navbar-brand img {
-  width: 30%;
+  width: 25%;
 }
 .nav-item a:hover {
   color: #ffb300 !important;
@@ -26,4 +26,10 @@ span {
   color: white;
   border-top-left-radius: 20px;
   border-bottom-right-radius: 20px;
+}
+.navbar-toggler:focus {
+  box-shadow: none !important;
+}
+.navbar-color {
+  background-color: #222222 !important;
 }

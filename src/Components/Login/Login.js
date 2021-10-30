@@ -1,6 +1,8 @@
 import React from "react";
 import { useHistory, useLocation } from "react-router";
 import useAuth from "../../Hooks/useAuth";
+import Header from "../Header/Header";
+import "../Header/Header.css";
 
 const Login = () => {
   const { googleSignin, setError, setIsLoad, setUser } = useAuth();
@@ -20,6 +22,7 @@ const Login = () => {
   };
   return (
     <>
+      <Header></Header>
       <div className="card container text-center p-5 w-50 my-5">
         <div className="card-title fs-1 fw-bold">Please Log in first</div>
         <div

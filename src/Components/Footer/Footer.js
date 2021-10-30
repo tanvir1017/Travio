@@ -45,9 +45,7 @@ const Footer = () => {
             </div>
             <div className="col-md-3 col-lg-3 col-sm-12 text-start">
               <div className="row">
-                <h3 className="footerAlert mt-3 mb-4 shadow text-start">
-                  Follow us on
-                </h3>
+                <h5 className="footerAlert mt-3 mb-4 shadow">Follow us on</h5>
                 <div className="col-md-7 col-lg-7 col-12">
                   <div className="row">
                     <div className="col-md-3">

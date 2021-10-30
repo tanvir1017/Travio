@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { HashLink } from "react-router-hash-link";
+import Header from "../Header/Header";
+import "../Header/Header.css";
 import "./MangeOrder.css";
 
 const ManageOrder = () => {
@@ -30,8 +32,9 @@ const ManageOrder = () => {
     }
   };
   return (
-    <div className="container my-4 shadow-lg border p-3 rounded">
-      <div className="row">
+    <>
+      <Header></Header>
+      <div className="container my-4 ">
         <h2>User Found : {userData?.length}</h2>
         <div className="col-lg-12 col-md-11 col-sm-10">
           <table class="table  table-hover">
@@ -65,8 +68,7 @@ const ManageOrder = () => {
           </table>
         </div>
       </div>
-      {/* home route */}
-      <div className="text-center mt-3 mb-0">
+      <div className="text-center mt-3 mb-2">
         <HashLink
           to="/home#cardCol"
           className="shadow-lg btn deleteBtn border px-5 rounded"
@@ -74,7 +76,7 @@ const ManageOrder = () => {
           <i class="fas fa-arrow-left"></i>
         </HashLink>
       </div>
-    </div>
+    </>
   );
 };
 

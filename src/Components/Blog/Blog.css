@@ -1,0 +1,22 @@
+.add-service form {
+  display: flex;
+  flex-direction: column;
+}
+.add-service form input {
+  margin: 10px;
+  height: 50px;
+  padding: 10px;
+  width: 100%;
+}
+.add-service textarea {
+  margin: 10px;
+  height: 150px;
+  padding: 10px;
+  width: 100%;
+}
+.clock {
+  background: #ffb300;
+  padding: 6px 12px;
+  border-radius: 70px;
+  font-size: 12px;
+}

@@ -9,7 +9,7 @@ const Navbar = () => {
   return (
     <nav class="navbar navbar-expand-lg">
       <div class="container">
-        <Link class="navbar-brand">
+        <Link class="navbar-brand" to="/home">
           <img src="https://i.ibb.co/4WHk98C/Logo-Makr-77iqbf.png" alt="" />
         </Link>
         <button
@@ -21,7 +21,9 @@ const Navbar = () => {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-icon"></span>
+          <span class="navbar-toggler-icon navbar-menu">
+            <i class="fas fa-bars"></i>
+          </span>
         </button>
         <div class="collapse navbar-collapse " id="navbarNav">
           <ul class="navbar-nav ms-auto">
@@ -33,11 +35,6 @@ const Navbar = () => {
             <li class="nav-item">
               <Link class="nav-link" to="/manage_orders">
                 Manage Orders
-              </Link>
-            </li>
-            <li class="nav-item">
-              <Link class="nav-link" to="/addAPlan">
-                Add you plan
               </Link>
             </li>
             <li class="nav-item">

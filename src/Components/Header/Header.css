@@ -1,11 +1,13 @@
 .heder-banner-background {
-  background-image: linear-gradient(#20202031, #03030328),
-    url("https://i.ibb.co/9T8HM9R/slider-header-banner-2.png");
+  background-image: url("https://i.ibb.co/9T8HM9R/slider-header-banner-2.png");
   background-repeat: no-repeat;
   background-size: cover;
   height: 86vh;
   background-attachment: fixed;
   width: 100%;
+}
+.navBar-color {
+  background: #222 !important;
 }
 .linkText {
   color: white;
@@ -54,13 +56,15 @@ select {
 .input button:hover {
   background: #000;
 }
-select {
-  color: #808080;
-}
-select option {
-  background: #e2e2e2;
-  box-shadow: none !important;
-}
-select option:hover {
-  background: #949494;
+
+@media only screen and (max-width: 668px) {
+  .heder-banner-background {
+    height: 100vh;
+    width: 100vw;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .heading-input {
+    display: none;
+  }
 }

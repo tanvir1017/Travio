@@ -1,45 +1,70 @@
 import React from "react";
-import Navbar from "../Navbar/Navbar";
+import { Link } from "react-router-dom";
+import useAuth from "../../Hooks/useAuth";
 import "./Header.css";
+
 const Header = () => {
+  const { user, logout } = useAuth();
   return (
-    <>
-      <div className="heder-banner-background">
-        <Navbar></Navbar>
-        <div className="heading-tag text-white fw-bold">
-          <div className="heading-title ">
-            <h1>Your Journey Begins</h1>
-            <p className="pb-4">
-              "A journey of a 1000 miles starts with a single step. Import the
-              full demo content with 1 click and create a head-turning website
-              for your travel agency. "
-            </p>
-            <div className="heading-input bg-white p-4">
-              <div className="input d-flex justify-content-center align-items-center">
-                <input type="text" placeholder="Where to" />
-                <select type="text">
-                  <option value="january">When</option>
-                  <option value="january">january</option>
-                  <option value="january">january</option>
-                  <option value="january">january</option>
-                  <option value="january">january</option>
-                  <option value="january">january</option>
-                </select>
-                <select type="text">
-                  <option value="january">Travel Type</option>
-                  <option value="january">Historical</option>
-                  <option value="january">Deef Jungle</option>
-                  <option value="january">january</option>
-                  <option value="january">january</option>
-                  <option value="january">january</option>
-                </select>
-                <button className="">Find Now</button>
-              </div>
-            </div>
-          </div>
+    <nav class="navbar navbar-expand-lg navBar-color fixed">
+      <div class="container">
+        <Link class="navbar-brand" to="/home">
+          <img src="https://i.ibb.co/4WHk98C/Logo-Makr-77iqbf.png" alt="" />
+        </Link>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon navbar-menu">
+            <i class="fas fa-bars"></i>
+          </span>
+        </button>
+        <div class="collapse navbar-collapse " id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <Link class="nav-link" to="/home">
+                Home
+              </Link>
+            </li>
+            <li class="nav-item">
+              <Link class="nav-link" to="/manage_orders">
+                Manage Orders
+              </Link>
+            </li>
+            <li class="nav-item">
+              <Link class="nav-link" to="/blog">
+                Blog
+              </Link>
+            </li>
+            <li class="nav-item">
+              <span class="nav-link">{user.displayName}</span>
+            </li>
+            <li class="nav-item">
+              <img
+                src={user.photoURL}
+                className="rounded-circle img-fluid"
+                style={{ width: "50px", marginRight: "10px" }}
+                alt=""
+              />
+            </li>
+            {user.displayName ? (
+              <button onClick={logout} className="LogOut-btn">
+                Log out <i class="fas fa-sign-out-alt"></i>
+              </button>
+            ) : (
+              <button onClick={logout} className="LogOut-btn">
+                Log in <i class="fas fa-sign-in-alt"></i>
+              </button>
+            )}
+          </ul>
         </div>
       </div>
-    </>
+    </nav>
   );
 };
 
