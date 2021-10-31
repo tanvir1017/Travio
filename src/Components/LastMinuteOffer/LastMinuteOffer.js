@@ -16,7 +16,7 @@ const LastMinuteOffer = (props) => {
             <strong>{price}</strong>
             <br />
             <Link to={`/serviceDetails/${_id}`}>
-              <button className="btn btn-success">Book Now</button>
+              <button className="btn btn-dark">Book Now</button>
             </Link>
           </div>
         </div>

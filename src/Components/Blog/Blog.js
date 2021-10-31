@@ -12,7 +12,6 @@ const Blog = () => {
   const [blog, setBlog] = useState();
   const { register, handleSubmit, reset } = useForm();
   const onSubmit = (data) => {
-    console.log(data);
     axios
       .post("https://arcane-fjord-23873.herokuapp.com/blog", data)
       .then((res) => {

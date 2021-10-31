@@ -1,69 +1,32 @@
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import BlogCard2 from "../BlogCard/BlogCard2";
 import "./OurBlog.css";
 
 const OurBlog = () => {
+  const [blog, setBlog] = useState();
+  useEffect(() => {
+    fetch("https://arcane-fjord-23873.herokuapp.com/blog")
+      .then((res) => res.json())
+      .then((data) => {
+        setBlog(data);
+      });
+  }, [blog]);
   return (
-    <div>
-      <div class="row row-cols-1 row-cols-md-3 g-4">
-        <div class="col">
-          <div class="card">
-            <img
-              src="https://i.ibb.co/fxDMYVf/blog-post-1-m.jpg"
-              class="card-img-top"
-              alt="..."
-            />
-          </div>
-        </div>{" "}
-        <div class="col">
-          <div class="card">
-            <img
-              src="https://i.ibb.co/fnvBw1s/blog-post-5-m.jpg"
-              class="card-img-top"
-              alt="..."
-            />
-          </div>
-        </div>{" "}
-        <div class="col">
-          <div class="card">
-            <img
-              src="https://i.ibb.co/kKnmTNy/blog-post-6-m-550x550.jpg"
-              class="card-img-top"
-              alt="..."
-            />
-          </div>
-        </div>{" "}
-        <div class="col">
-          <div class="card">
-            <img
-              src="https://i.ibb.co/BgzgBFP/blog-post-7-m.jpg"
-              class="card-img-top"
-              alt="..."
-            />
-          </div>
-        </div>
-        <div class="col">
-          <div class="card">
-            <img
-              src="https://i.ibb.co/6FGm3Dz/blog-post-4-m-550x550.jpg"
-              class="card-img-top"
-              alt="..."
-            />
-          </div>
-        </div>
-        <div class="col">
-          <div class="card">
-            <img
-              src="https://i.ibb.co/WtwvL2h/blog-post-3-m-550x550.jpg"
-              class="card-img-top"
-              alt="..."
-            />
+    <div className="container mt-3">
+      <div className="row">
+        <div className="col-md-12 col-lg-12">
+          <div class="row row-cols-1 row-cols-md-3 g-3">
+            {blog?.map((blogs) => (
+              <BlogCard2 key={blogs._id} blogs={blogs}></BlogCard2>
+            ))}
           </div>
         </div>
       </div>
       <div>
         <Link to="/blog">
           <button className="button mt-5 mb-3" title="Our Blogs">
-            See More
+            See More <i class="fas fa-arrow-right"></i>
           </button>
         </Link>
       </div>

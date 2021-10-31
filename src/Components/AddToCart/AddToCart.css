@@ -1,0 +1,21 @@
+.custom-card {
+  box-shadow: 0 0 5px rgb(0, 0, 0, 0.5);
+  padding: 8px;
+  border-radius: 8px;
+  margin: 5px;
+}
+.custom-card img {
+  width: 150px;
+  height: 150px;
+  border-radius: 8px;
+}
+.detail-info {
+  line-height: 14px;
+}
+.text-size {
+  font-size: 13px;
+}
+.AddToCart {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}

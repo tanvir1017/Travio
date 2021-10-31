@@ -1,11 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import useFirebase from "../../Hooks/useFirebase";
+import useAuth from "../../Hooks/useAuth";
 import "./Navbar.css";
 
 const Navbar = () => {
-  const { user, logout } = useFirebase();
-  console.log(user);
+  const { user, logout } = useAuth();
   return (
     <nav class="navbar navbar-expand-lg">
       <div class="container">
@@ -37,16 +36,29 @@ const Navbar = () => {
                 Home
               </Link>
             </li>
-            <li class="nav-item">
-              <Link class="nav-link" to="/manage_orders">
-                Manage Orders
-              </Link>
-            </li>
-            <li class="nav-item">
-              <Link class="nav-link" to="/blog">
-                Blog
-              </Link>
-            </li>
+            {user.displayName && (
+              <li class="nav-item">
+                <Link class="nav-link" to="/manage_orders">
+                  Manage Orders
+                </Link>
+              </li>
+            )}
+            {user.displayName && (
+              <li class="nav-item">
+                <Link class="nav-link" to="/blog">
+                  Blog
+                </Link>
+              </li>
+            )}
+
+            {user.displayName && (
+              <li class="nav-item">
+                <Link class="nav-link" to="/mybook">
+                  My Book
+                </Link>
+              </li>
+            )}
+
             <li class="nav-item">
               <span class="nav-link">{user.displayName}</span>
             </li>

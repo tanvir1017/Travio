@@ -14,8 +14,8 @@
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -10%);
-  color: #ffb300 !important;
+  transform: translate(-90%, 50%);
+  color: #ffffff !important;
 }
 .col:hover .addedBtn {
   display: block;

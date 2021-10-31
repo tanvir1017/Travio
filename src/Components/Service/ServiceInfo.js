@@ -11,9 +11,11 @@ import "./ServiceInfo.css";
 const ServiceInfo = () => {
   const { user } = useAuth();
   const { register, handleSubmit, reset } = useForm();
+  const [service, setService] = useState({});
+  const img = service.img;
   const onSubmit = (data) => {
     axios
-      .post("https://arcane-fjord-23873.herokuapp.com/booking", data)
+      .post("https://arcane-fjord-23873.herokuapp.com/booking", { data, img })
       .then((res) => {
         if (res.data.insertedId) {
           alert("Booked");
@@ -22,7 +24,7 @@ const ServiceInfo = () => {
       });
   };
   const { id } = useParams();
-  const [service, setService] = useState({});
+  console.log(service);
   useEffect(() => {
     fetch(`https://arcane-fjord-23873.herokuapp.com/travel/${id}`)
       .then((res) => res.json())

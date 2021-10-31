@@ -8,7 +8,7 @@ const AdminPanel = (props) => {
   const handleDelete = (id) => {
     const proccessed = window.confirm("Are really wants to delete");
     if (proccessed) {
-      const url = `http://localhost:5000/booking/${id}`;
+      const url = `https://arcane-fjord-23873.herokuapp.com/booking/${id}`;
       fetch(url, {
         method: "delete",
       })
@@ -43,7 +43,7 @@ const AdminPanel = (props) => {
       <td>{destination}</td>
       <td>{country}</td>
       <td>{date}</td>
-      <td>{status ? "Approved" : "Pending..."} </td>
+      <td>{!status ? "Pending" : "Approved"} </td>
       <td>
         {" "}
         <input
