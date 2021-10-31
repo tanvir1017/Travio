@@ -59,12 +59,32 @@ select {
 
 @media only screen and (max-width: 668px) {
   .heder-banner-background {
-    height: 100vh;
-    width: 100vw;
+    background-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.445),
+        rgba(0, 0, 0, 0.377)
+      ),
+      url("https://c1.wallpaperflare.com/preview/262/812/847/travel-outdoors-girl-landscape.jpg");
+    height: 85vh;
+    width: 100%;
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
   }
   .heading-input {
     display: none;
+  }
+  .heading-title {
+    position: absolute;
+    left: -50%;
+    top: 30%;
+    transform: translate(85%, 50%);
+    display: block;
+  }
+  .heading-title h1 {
+    color: coral;
+    width: 100%;
+    font: bold;
+    font-size: 28px;
   }
 }

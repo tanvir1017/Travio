@@ -13,15 +13,17 @@ const Blog = () => {
   const { register, handleSubmit, reset } = useForm();
   const onSubmit = (data) => {
     console.log(data);
-    axios.post("http://localhost:5000/blog", data).then((res) => {
-      if (res.data.insertedId) {
-        alert("Blog Added successFully");
-        reset();
-      }
-    });
+    axios
+      .post("https://arcane-fjord-23873.herokuapp.com/blog", data)
+      .then((res) => {
+        if (res.data.insertedId) {
+          alert("Blog Added successFully");
+          reset();
+        }
+      });
   };
   useEffect(() => {
-    fetch("http://localhost:5000/blog")
+    fetch("https://arcane-fjord-23873.herokuapp.com/blog")
       .then((res) => res.json())
       .then((data) => {
         setBlog(data);
@@ -30,19 +32,19 @@ const Blog = () => {
   return (
     <>
       <Header></Header>
-      <div className="container mt-3">
+      <div className="container-fluid mt-3">
         <div className="row">
           <div
-            className="col-md-8 col-lg-8"
+            className="col-md-9 col-lg-9"
             style={{ overflow: "scroll", height: "100vh" }}
           >
-            <div class="row row-cols-1 row-cols-md-2 g-4">
+            <div class="row row-cols-1 row-cols-md-3 g-3">
               {blog?.map((blogs) => (
                 <BlogCard key={blogs._id} blogs={blogs}></BlogCard>
               ))}
             </div>
           </div>
-          <div className="col-md-4 col-lg-4 add-service">
+          <div className="col-md-3 col-lg-3 add-service">
             <form onSubmit={handleSubmit(onSubmit)}>
               <input
                 {...register("firstName")}
