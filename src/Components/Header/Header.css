@@ -75,10 +75,9 @@ select {
     display: none;
   }
   .heading-title {
-    position: absolute;
     left: -50%;
     top: 30%;
-    transform: translate(85%, 50%);
+    transform: translate(85%, 0%);
     display: block;
   }
   .heading-title h1 {

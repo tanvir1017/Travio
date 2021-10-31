@@ -30,6 +30,7 @@ const ServiceInfo = () => {
       .then((res) => res.json())
       .then((data) => {
         setService(data);
+        console.log(data);
       });
   }, [id]);
   return (
@@ -77,30 +78,34 @@ const ServiceInfo = () => {
                   <div class="row g-0">
                     <div class="col-md-12">
                       <div class="card-body">
-                        <p class="card-text text-start">
+                        <p class="card-text text-start text-muted">
                           {service.description}
                         </p>
                         <hr />
                         <p>
-                          <span className="text-warning">Included :</span>{" "}
-                          {service.Included}
+                          <span className="text-muted fw-bold">
+                            Departure :
+                          </span>{" "}
+                          {service.Departure}
                         </p>
                         <hr />
                         <p>
-                          <span className="text-warning">Included :</span>{" "}
+                          <span className="text-muted fw-bold">Included :</span>{" "}
                           {service.Included}
+                        </p>
+                        <hr />
+
+                        <p>
+                          <span className="text-muted fw-bold">Time :</span>{" "}
+                          {service.time}
                         </p>
                         <hr />
                         <p>
-                          <span className="text-warning">Included :</span>{" "}
-                          {service.Included}
+                          <span className="text-muted fw-bold">
+                            ReturnTime :
+                          </span>{" "}
+                          {service.ReturnTime}
                         </p>
-                        <hr />
-                        <p>
-                          <span className="text-warning">Included :</span>{" "}
-                          {service.Included}
-                        </p>
-                        <hr />
                       </div>
                     </div>
                   </div>
@@ -143,7 +148,7 @@ const ServiceInfo = () => {
               <input
                 type="text"
                 {...register("country")}
-                placeholder="Your Country"
+                defaultValue={service.place}
                 required
               />
               <input

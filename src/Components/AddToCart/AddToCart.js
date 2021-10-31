@@ -33,15 +33,15 @@ const AddToCart = (props) => {
   return (
     <div className="container">
       <div className="row g-0 custom-card p-3">
-        <div className="col-4">
+        <div className="col-md-4 col-lg-4 col-sm-12">
           <img src={img} alt="" />
         </div>
-        <div className="col-7">
+        <div className="col-md-7 col-lg-7 col-sm-12 mt-2">
           <div className="detail-info">
             <p className="fs-5 fw-bold text-muted">{country}</p>
             <p className="text-size text-muted">
               <span className="text-muted">
-                <i className="fas text-warning fa-address-card text-custom"></i>{" "}
+                <i className="fas text-warning fa-address-card"></i>{" "}
                 {status ? "Approved" : "Panding..."}
               </span>
               <span className="text-dark ms-5">
@@ -68,7 +68,7 @@ const AddToCart = (props) => {
             </p>
           </div>
         </div>
-        <div className="col-1">
+        <div className="col-md-1 col-lg-1 col-sm-12">
           <button
             className="alert alert-warning"
             onClick={() => handleDelete(_id)}

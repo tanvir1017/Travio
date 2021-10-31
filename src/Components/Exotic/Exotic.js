@@ -4,8 +4,8 @@ import "./Exotic.css";
 const Exotic = () => {
   return (
     <div className="my-5">
-      <div className="row">
-        <div className="col-md-8 col-lg-8">
+      <div className="row exotic">
+        <div className="col-md-8 col-lg-8 " style={{ padding: "0 !important" }}>
           <div>
             <img src="https://i.ibb.co/6PJSWmH/Screenshot-1.png" alt="" />
             <div className="row mt-3">

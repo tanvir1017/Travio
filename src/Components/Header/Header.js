@@ -31,16 +31,27 @@ const Header = () => {
                 Home
               </Link>
             </li>
-            <li class="nav-item">
-              <Link class="nav-link" to="/manage_orders">
-                Manage Orders
-              </Link>
-            </li>
-            <li class="nav-item">
-              <Link class="nav-link" to="/blog">
-                Blog
-              </Link>
-            </li>
+            {user.displayName && (
+              <li class="nav-item">
+                <Link class="nav-link" to="/manage_orders">
+                  Manage Orders
+                </Link>
+              </li>
+            )}
+            {user.displayName && (
+              <li class="nav-item">
+                <Link class="nav-link" to="/mybook">
+                  My Book
+                </Link>
+              </li>
+            )}
+            {user.displayName && (
+              <li class="nav-item">
+                <Link class="nav-link" to="/blog">
+                  Blog
+                </Link>
+              </li>
+            )}
             <li class="nav-item">
               <span class="nav-link">{user.displayName}</span>
             </li>
