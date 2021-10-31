@@ -10,6 +10,7 @@ import "./ServiceInfo.css";
 
 const ServiceInfo = () => {
   const { user } = useAuth();
+  console.log(user);
   const { register, handleSubmit, reset } = useForm();
   const [service, setService] = useState({});
   const img = service.img;
