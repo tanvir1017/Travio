@@ -10,7 +10,12 @@ const Navbar = () => {
     <nav class="navbar navbar-expand-lg">
       <div class="container">
         <Link class="navbar-brand" to="/home">
-          <img src="https://i.ibb.co/4WHk98C/Logo-Makr-77iqbf.png" alt="" />
+          <img
+            style={{ width: "150px" }}
+            className="img-fluid"
+            src="https://i.ibb.co/ZLPJq9W/Untitled-1.png"
+            alt=""
+          />
         </Link>
         <button
           class="navbar-toggler"

@@ -19,7 +19,6 @@ const ServiceInfo = () => {
           alert("Booked");
           reset();
         }
-        console.log(res);
       });
   };
   const { id } = useParams();
@@ -117,24 +116,40 @@ const ServiceInfo = () => {
                 {...register("firstName")}
                 placeholder="First name"
                 defaultValue={user.displayName}
+                required
               />
               <input
                 {...register("email")}
                 placeholder="email"
                 defaultValue={user.email}
+                required
               />
+              <input {...register("date")} placeholder="Date" required />
 
               <input
-                type="number"
-                {...register("age", { min: 16, max: 70 })}
-                placeholder="age must be 16+"
+                type="text"
+                {...register("WhereTo")}
+                placeholder="Your Starting Point"
+                required
               />
-              <input {...register("img")} placeholder="img-url" />
-              <textarea
-                {...register("description")}
-                placeholder="description"
+              <input
+                type="text"
+                {...register("destination")}
+                placeholder="Choose Destination"
+                required
               />
-              <input type="submit" value="Book Now" className="bookBtn" />
+              <input
+                type="text"
+                {...register("country")}
+                placeholder="Your Country"
+                required
+              />
+              <input
+                type="submit"
+                value="Book Now"
+                className="bookBtn"
+                required
+              />
             </form>
           </div>
         </div>

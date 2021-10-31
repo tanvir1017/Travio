@@ -37,7 +37,7 @@ const useFirebase = () => {
       }
       setIsLoad(false);
     });
-  }, []);
+  }, [auth]);
   return {
     error,
     googleSignin,

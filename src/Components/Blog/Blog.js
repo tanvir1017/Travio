@@ -28,7 +28,7 @@ const Blog = () => {
       .then((data) => {
         setBlog(data);
       });
-  }, []);
+  }, [blog]);
   return (
     <>
       <Header></Header>
