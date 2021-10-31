@@ -16,25 +16,25 @@ const TourChoose = () => {
         <div className="container row mt-3 row-cols-md-4 row-cols-lg-4 row-cols-sm-2">
           <div className="col">
             <h2>
-              <i class="fas fa-2x fa-plane"></i>
+              <i className="fas fa-2x fa-plane"></i>
             </h2>
             <h5 className="text-white mt-2">Self-Guided</h5>
           </div>
           <div className="col">
             <h2>
-              <i class="fas fa-2x fa-mountain"></i>
+              <i className="fas fa-2x fa-mountain"></i>
             </h2>
             <h5 className="text-white mt-2">Adventure</h5>
           </div>
           <div className="col">
             <h2>
-              <i class="fab fa-2x fa-fly"></i>
+              <i className="fab fa-2x fa-fly"></i>
             </h2>
             <h5 className="text-white mt-2">Wildlife</h5>
           </div>
           <div className="col">
             <h2>
-              <i class="fas fa-2x fa-umbrella-beach"></i>
+              <i className="fas fa-2x fa-umbrella-beach"></i>
             </h2>
             <h5 className="text-white mt-2">Beach</h5>
           </div>

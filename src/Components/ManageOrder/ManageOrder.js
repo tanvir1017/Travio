@@ -16,7 +16,7 @@ const ManageOrder = () => {
       <Header></Header>
       <div className="container py-5">
         <div className="col-lg-12 col-md-12 rounded border-warning border col-sm-10 table-responsive shadow-lg p-5">
-          <table class="table table-hover table-striped ">
+          <table className="table table-hover table-striped ">
             <thead>
               <tr>
                 <th scope="col">Name</th>
@@ -46,7 +46,7 @@ const ManageOrder = () => {
           to="/home#cardCol"
           className="shadow-lg btn deleteBtn border px-5 rounded"
         >
-          <i class="fas fa-arrow-left"></i>
+          <i className="fas fa-arrow-left"></i>
         </HashLink>
       </div>
     </>

@@ -6,9 +6,9 @@ const LastMinuteOffer = (props) => {
   const { _id, title, price, img } = props.offer;
   return (
     <div className="cardCol">
-      <div class="col">
-        <div class="card">
-          <img src={img} class="card-img-top" alt="..." />
+      <div className="col">
+        <div className="card">
+          <img src={img} className="card-img-top" alt="..." />
         </div>
         <div className="addedBtn">
           <div className="text-start">

@@ -16,7 +16,7 @@ const OurBlog = () => {
     <div className="container mt-3">
       <div className="row">
         <div className="col-md-12 col-lg-12">
-          <div class="row row-cols-1 row-cols-md-3 g-3">
+          <div className="row row-cols-1 row-cols-md-3 g-3">
             {blog?.map((blogs) => (
               <BlogCard2 key={blogs._id} blogs={blogs}></BlogCard2>
             ))}
@@ -26,7 +26,7 @@ const OurBlog = () => {
       <div>
         <Link to="/blog">
           <button className="button mt-5 mb-3" title="Our Blogs">
-            See More <i class="fas fa-arrow-right"></i>
+            See More <i className="fas fa-arrow-right"></i>
           </button>
         </Link>
       </div>

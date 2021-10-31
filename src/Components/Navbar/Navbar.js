@@ -6,9 +6,9 @@ import "./Navbar.css";
 const Navbar = () => {
   const { user, logout } = useAuth();
   return (
-    <nav class="navbar navbar-expand-lg">
-      <div class="container">
-        <Link class="navbar-brand" to="/home">
+    <nav className="navbar navbar-expand-lg">
+      <div className="container">
+        <Link className="navbar-brand" to="/home">
           <img
             style={{ width: "150px" }}
             className="img-fluid"
@@ -17,7 +17,7 @@ const Navbar = () => {
           />
         </Link>
         <button
-          class="navbar-toggler"
+          className="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarNav"
@@ -25,44 +25,44 @@ const Navbar = () => {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-icon navbar-menu">
-            <i class="fas fa-bars"></i>
+          <span className="navbar-toggler-icon navbar-menu">
+            <i className="fas fa-bars"></i>
           </span>
         </button>
-        <div class="collapse navbar-collapse " id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <Link class="nav-link" to="/home">
+        <div className="collapse navbar-collapse " id="navbarNav">
+          <ul className="navbar-nav ms-auto">
+            <li className="nav-item">
+              <Link className="nav-link" to="/home">
                 Home
               </Link>
             </li>
             {user.displayName && (
-              <li class="nav-item">
-                <Link class="nav-link" to="/manage_orders">
+              <li className="nav-item">
+                <Link className="nav-link" to="/manage_orders">
                   Manage Orders
                 </Link>
               </li>
             )}
             {user.displayName && (
-              <li class="nav-item">
-                <Link class="nav-link" to="/blog">
+              <li className="nav-item">
+                <Link className="nav-link" to="/blog">
                   Blog
                 </Link>
               </li>
             )}
 
             {user.displayName && (
-              <li class="nav-item">
-                <Link class="nav-link" to="/mybook">
+              <li className="nav-item">
+                <Link className="nav-link" to="/mybook">
                   My Book
                 </Link>
               </li>
             )}
 
-            <li class="nav-item">
-              <span class="nav-link">{user.displayName}</span>
+            <li className="nav-item">
+              <span className="nav-link">{user.displayName}</span>
             </li>
-            <li class="nav-item">
+            <li className="nav-item">
               <img
                 src={user.photoURL}
                 className="rounded-circle img-fluid"
@@ -72,12 +72,12 @@ const Navbar = () => {
             </li>
             {user.displayName ? (
               <button onClick={logout} className="LogOut-btn">
-                Log out <i class="fas fa-sign-out-alt"></i>
+                Log out <i className="fas fa-sign-out-alt"></i>
               </button>
             ) : (
-              <li class="nav-item">
-                <Link class="nav-link" to="/Login">
-                  Login <i class="fas fa-sign-in-alt"></i>
+              <li className="nav-item">
+                <Link className="nav-link" to="/Login">
+                  Login <i className="fas fa-sign-in-alt"></i>
                 </Link>
               </li>
             )}

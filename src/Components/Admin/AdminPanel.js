@@ -48,7 +48,7 @@ const AdminPanel = (props) => {
         {" "}
         <input
           onChange={handelApproved}
-          class="form-check-input ms-1"
+          className="form-check-input ms-1"
           type="checkbox"
         />
       </td>
@@ -57,7 +57,7 @@ const AdminPanel = (props) => {
           className="btn btn-warning deleteBtn"
           onClick={() => handleDelete(_id)}
         >
-          <i class="fas fa-user-minus"></i>
+          <i className="fas fa-user-minus"></i>
         </button>
       </td>
     </tr>

@@ -55,16 +55,16 @@ const AddToCart = (props) => {
                 <i className="fas text-warning fa-street-view"></i> {WhereTo}
               </p>
               <p className="text-muted text-size">
-                <i class="fas text-warning fa-plane-departure text-custom text-size"></i>{" "}
+                <i className="fas text-warning fa-plane-departure text-custom text-size"></i>{" "}
                 {destination}
               </p>
             </div>
             <p className="me-4 text-muted text-size">
-              <i class="fas fa-user text-custom text-warning text-size"></i>{" "}
+              <i className="fas fa-user text-custom text-warning text-size"></i>{" "}
               {firstName}
             </p>
             <p className="text-muted text-size">
-              <i class="fas fa-envelope text-custom text-size"></i> {email}
+              <i className="fas fa-envelope text-custom text-size"></i> {email}
             </p>
           </div>
         </div>

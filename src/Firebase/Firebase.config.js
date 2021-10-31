@@ -1,10 +1,10 @@
 const firebaseConfig = {
-  apiKey: "AIzaSyCucXGO7MgROBCv9CKZQ2h07i8WkGA6GnM",
-  authDomain: "tourism-589c8.firebaseapp.com",
-  projectId: "tourism-589c8",
-  storageBucket: "tourism-589c8.appspot.com",
-  messagingSenderId: "215395846768",
-  appId: "1:215395846768:web:fa2c0674b7194dae74c2b5",
+  apiKey: "AIzaSyA4XMgsJaYhcd-6JYDbyzQZT63vgMqJ_qg",
+  authDomain: "travio-59ef5.firebaseapp.com",
+  projectId: "travio-59ef5",
+  storageBucket: "travio-59ef5.appspot.com",
+  messagingSenderId: "16366742098",
+  appId: "1:16366742098:web:8c91978f5cd8645c20cd8b",
 };
 
 export default firebaseConfig;

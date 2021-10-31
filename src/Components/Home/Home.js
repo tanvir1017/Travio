@@ -76,7 +76,7 @@ const Home = () => {
             Last Minutes <span className="text-warning"> Offers</span>
           </h1>
 
-          <div class="row row-cols-1 row-cols-md-3 g-4">
+          <div className="row row-cols-1 row-cols-md-3 g-4">
             {offers?.map((offer) => (
               <LastMinuteOffer offer={offer}></LastMinuteOffer>
             ))}

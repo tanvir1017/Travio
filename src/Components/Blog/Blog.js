@@ -37,7 +37,7 @@ const Blog = () => {
             className="col-md-9 col-lg-9"
             style={{ overflow: "scroll", height: "100vh" }}
           >
-            <div class="row row-cols-1 row-cols-md-3 g-3">
+            <div className="row row-cols-1 row-cols-md-3 g-3">
               {blog?.map((blogs) => (
                 <BlogCard key={blogs._id} blogs={blogs}></BlogCard>
               ))}
@@ -95,7 +95,7 @@ const Blog = () => {
         <div className="text-center my-5">
           <HashLink to="/home#blog">
             <button title="home" className="shadow-lg btn border px-5 rounded">
-              <i class="fas fa-arrow-left"></i>
+              <i className="fas fa-arrow-left"></i>
             </button>
           </HashLink>
         </div>
