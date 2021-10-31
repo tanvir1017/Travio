@@ -31,7 +31,9 @@ const Login = () => {
           style={{ cursor: "pointer" }}
           className="googleSignIn mt-4 card-body alert alert-success p-3 w-75 mx-auto "
         >
-          <i className=" fa-3x fab fa-google"></i>
+          {/* <i className="fa-3x fab fa-google"></i>
+          <i className=" fa-3x fab fa-google"></i> */}
+          <h2>Google</h2>
         </div>
         <div>______________________________</div>
       </div>
